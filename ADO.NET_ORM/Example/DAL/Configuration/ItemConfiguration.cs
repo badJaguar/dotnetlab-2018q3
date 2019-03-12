@@ -3,7 +3,8 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace DAL.Configuration
 {
-    class ItemConfiguration : EntityTypeConfiguration<Item>
+    /// <inheritdoc />
+    internal class ItemConfiguration : EntityTypeConfiguration<Item>
     {
         public ItemConfiguration()
         {
