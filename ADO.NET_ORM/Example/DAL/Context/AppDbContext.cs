@@ -1,15 +1,15 @@
 ﻿using System.Data.Entity;
 using DAL.Configuration;
 using DAL.Entities;
-                                                                                
+
 namespace DAL.Context
 {
     public class AppDbContext : DbContext
     {
         public AppDbContext() : base("InternationWidgets")
         {
-            Database.SetInitializer(
-                new MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
+            Database.SetInitializer(new 
+                MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
         }
 
         public DbSet<Item> Items { get; set; }

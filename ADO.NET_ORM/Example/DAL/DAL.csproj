@@ -52,7 +52,6 @@
     <Compile Include="Configuration\ItemConfiguration.cs" />
     <Compile Include="Configuration\OrderConfiguration.cs" />
     <Compile Include="Context\AppDbContext.cs" />
-    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Migrations\201903121208274_InitialCreate.cs" />
