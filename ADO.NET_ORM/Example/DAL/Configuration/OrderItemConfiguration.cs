@@ -7,10 +7,10 @@ namespace DAL.Configuration
     {
         public OrderItemConfiguration()
         {
-            ToTable("tbl_order_items").HasKey(item => new 
+            ToTable("tbl_order_items").HasKey(item => new
             {
-                item.ItemId,
-                item.OrderId
+                item.OrderId,
+                item.ItemId
             });
             Property(item => item.OrderId).HasColumnName("cln_order_id");
             Property(item => item.ItemId).HasColumnName("cln_item_id");
@@ -19,8 +19,8 @@ namespace DAL.Configuration
             HasRequired(o => o.Order)
                 .WithMany(order => order.OrderItems)
                 .HasForeignKey(item => item.OrderId);
-            HasRequired(i => i.Item)
-                .WithMany(item => item.OrderItems)
+            HasRequired(o => o.Item)
+                .WithMany(order => order.OrderItems)
                 .HasForeignKey(item => item.ItemId);
         }
     }
