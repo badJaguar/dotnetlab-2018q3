@@ -25,6 +25,6 @@ namespace DAL.Entities
         /// <summary>
         /// Gets or sets a collection of orders.
         /// </summary>
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
     }
 }

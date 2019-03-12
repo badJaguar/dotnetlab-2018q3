@@ -12,7 +12,7 @@ namespace Example
             {
                 var items = context.Items.ToList();
 
-                Console.WriteLine($"Items number: {items.Count}");
+                Console.WriteLine($"OrderItems number: {items.Count}");
 
                 foreach (var item in items)
                 {

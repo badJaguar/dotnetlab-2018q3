@@ -12,7 +12,6 @@ namespace DAL.Migrations
                 c => new
                     {
                         cln_id = c.Int(nullable: false, identity: true),
-                        //CustomerId = c.Int(nullable: false),
                         cln_date_of_order = c.DateTimeOffset(nullable: false, precision: 7),
                         cln_total_price = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
