@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ItemConfiguration.cs" />
+    <Compile Include="Configuration\OrderConfiguration.cs" />
     <Compile Include="Context\AppDbContext.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Item.cs" />
@@ -57,6 +58,10 @@
     <Compile Include="Migrations\201903121208274_InitialCreate.cs" />
     <Compile Include="Migrations\201903121208274_InitialCreate.Designer.cs">
       <DependentUpon>201903121208274_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121642423_AddOrderConfWithAllProperties.cs" />
+    <Compile Include="Migrations\201903121642423_AddOrderConfWithAllProperties.Designer.cs">
+      <DependentUpon>201903121642423_AddOrderConfWithAllProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903121208274_InitialCreate.resx">
       <DependentUpon>201903121208274_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121642423_AddOrderConfWithAllProperties.resx">
+      <DependentUpon>201903121642423_AddOrderConfWithAllProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

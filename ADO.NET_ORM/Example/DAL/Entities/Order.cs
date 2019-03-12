@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DAL.Entities
 {
@@ -23,8 +24,18 @@ namespace DAL.Entities
         public virtual Customer Customer { get; set; }
 
         /// <summary>
-        /// Gets or sets a collection of ordered items.
+        /// Gets or sets a date of order with localization.
         /// </summary>
-        public virtual ICollection<Item> ItemCollection { get; set; }
+        public DateTimeOffset OrderDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets an order price.
+        /// </summary>
+        public decimal TotalPrice { get; set; }
+
+        /// <summary>
+        /// Gets or sets a collection of items.
+        /// </summary>
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

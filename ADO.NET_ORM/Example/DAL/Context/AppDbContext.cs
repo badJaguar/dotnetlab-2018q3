@@ -18,6 +18,7 @@ namespace DAL.Context
         {
             //TODO: setup dbcontext configuration using EF Fluent API. DO NOT add property attributes for any files from "Entities" folder.
             modelBuilder.Configurations.Add(new ItemConfiguration());
+            modelBuilder.Configurations.Add(new OrderConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

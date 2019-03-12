@@ -1,4 +1,6 @@
-﻿namespace DAL.Entities
+﻿using System.Collections.Generic;
+
+namespace DAL.Entities
 {
     /// <summary>
     /// Represents an item entity.
@@ -19,5 +21,10 @@
         /// Gets or sets an item price.
         /// </summary>
         public decimal Price { get; set; }
+
+        /// <summary>
+        /// Gets or sets a collection of orders.
+        /// </summary>
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
