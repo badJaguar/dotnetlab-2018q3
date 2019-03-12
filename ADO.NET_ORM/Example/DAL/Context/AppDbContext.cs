@@ -16,6 +16,7 @@ namespace DAL.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //TODO: setup dbcontext configuration using EF Fluent API. DO NOT add property attributes for any files from "Entities" folder.
+            modelBuilder.Configurations.Add(new ItemConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
