@@ -8,7 +8,7 @@ namespace DAL.Context
     {
         public AppDbContext() : base("InternationWidgets")
         {
-            
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
         }
 
         public DbSet<Item> Items { get; set; }
