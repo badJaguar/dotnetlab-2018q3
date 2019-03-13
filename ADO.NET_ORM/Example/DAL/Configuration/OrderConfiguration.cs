@@ -11,6 +11,7 @@ namespace DAL.Configuration
             Property(order => order.Id).HasColumnName("cln_id");
             Property(order => order.OrderDate).HasColumnName("cln_date_of_order");
             Property(order => order.TotalPrice).HasColumnName("cln_total_price");
+            Property(order => order.CustomerId).HasColumnName("cln_cust_id");
         }
     }
 }

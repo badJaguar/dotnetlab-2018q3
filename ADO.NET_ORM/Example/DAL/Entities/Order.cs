@@ -14,6 +14,11 @@ namespace DAL.Entities
         public int Id { get; set; }
 
         /// <summary>
+        /// Gets or sets a customer ID. Order's owner.
+        /// </summary>
+        public int CustomerId { get; set; }
+
+        /// <summary>
         /// Gets or sets an order total price.
         /// </summary>
         public decimal TotalPrice { get; set; }
@@ -22,6 +27,11 @@ namespace DAL.Entities
         /// Gets or sets a date of order.
         /// </summary>
         public DateTimeOffset OrderDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets a customer.
+        /// </summary>
+        public virtual Customer Customer { get; set; }
 
         /// <summary>
         /// Gets or sets an item collection.
