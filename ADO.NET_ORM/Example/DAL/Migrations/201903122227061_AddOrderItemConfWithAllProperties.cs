@@ -2,7 +2,7 @@ namespace DAL.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class AddOrderItemConfWithAllProperties : DbMigration
     {
         public override void Up()
@@ -12,9 +12,10 @@ namespace DAL.Migrations
             AddPrimaryKey("dbo.tbl_order_items", new[] { "cln_item_id", "cln_order_id" });
             //DropColumn("dbo.tbl_orders", "CustomerId");
         }
-        
+
         public override void Down()
         {
+            // Here I understood that after any modification of entity model I must to generate a new Migration.
             //AddColumn("dbo.tbl_orders", "CustomerId", c => c.Int(nullable: false));
             DropPrimaryKey("dbo.tbl_order_items");
             DropColumn("dbo.tbl_order_items", "cln_qty");
