@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201903122227061_AddOrderItemConfWithAllProperties.Designer.cs">
       <DependentUpon>201903122227061_AddOrderItemConfWithAllProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903131417178_OrderItemUpdated.cs" />
+    <Compile Include="Migrations\201903131417178_OrderItemUpdated.Designer.cs">
+      <DependentUpon>201903131417178_OrderItemUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903122227061_AddOrderItemConfWithAllProperties.resx">
       <DependentUpon>201903122227061_AddOrderItemConfWithAllProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903131417178_OrderItemUpdated.resx">
+      <DependentUpon>201903131417178_OrderItemUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
