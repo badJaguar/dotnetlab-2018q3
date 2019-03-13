@@ -9,9 +9,13 @@ namespace DAL.Configuration
         {
             ToTable("tbl_orders").HasKey(key => key.Id);
             Property(order => order.Id).HasColumnName("cln_id");
+            Property(order => order.CustomerId).HasColumnName("cln_cust_id");
             Property(order => order.OrderDate).HasColumnName("cln_date_of_order");
             Property(order => order.TotalPrice).HasColumnName("cln_total_price");
-            Property(order => order.CustomerId).HasColumnName("cln_cust_id");
+
+            HasRequired(o => o.Customer)
+                .WithMany(c => c.Orders)
+                .HasForeignKey(o => o.CustomerId);
         }
     }
 }

@@ -18,7 +18,6 @@ namespace DAL.Migrations
                         cln_state = c.String(),
                     })
                 .PrimaryKey(t => t.cln_id);
-            
             AddColumn("dbo.tbl_orders", "Customer_Id", c => c.Int());
             CreateIndex("dbo.tbl_orders", "Customer_Id");
             AddForeignKey("dbo.tbl_orders", "Customer_Id", "dbo.tbl_customers", "cln_id");
