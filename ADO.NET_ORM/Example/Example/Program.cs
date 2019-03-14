@@ -8,6 +8,7 @@ namespace Example
             new SomeService().DoSmth();
 
             Console.WriteLine("Main Completed");
+            Console.ReadKey();
         }
     }
 }
