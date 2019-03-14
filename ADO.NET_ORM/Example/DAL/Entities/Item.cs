@@ -2,6 +2,9 @@
 
 namespace DAL.Entities
 {
+    /// <summary>
+    /// Represents an item entity.
+    /// </summary>
     public class Item
     {
         public int Id { get; set; }
