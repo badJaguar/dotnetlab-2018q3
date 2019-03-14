@@ -16,6 +16,7 @@ namespace DAL.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ItemConfiguration());
+            modelBuilder.Configurations.Add(new OrderConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

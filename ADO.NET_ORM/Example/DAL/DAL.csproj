@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ItemConfiguration.cs" />
+    <Compile Include="Configuration\OrderConfiguration.cs" />
     <Compile Include="Context\AppDbContext.cs" />
     <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Order.cs" />
     <Compile Include="Migrations\201903141540411_InitialCreate.cs" />
     <Compile Include="Migrations\201903141540411_InitialCreate.Designer.cs">
       <DependentUpon>201903141540411_InitialCreate.cs</DependentUpon>
