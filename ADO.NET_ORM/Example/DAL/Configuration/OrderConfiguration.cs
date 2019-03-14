@@ -11,6 +11,7 @@ namespace DAL.Configuration
             Property(order => order.Id).HasColumnName("cln_id");
             Property(order => order.CustomerId).HasColumnName("cln_customer_id");
             Property(order => order.Total).HasColumnName("cln_total");
+            Property(order => order.OrderDate).HasColumnName("cln_order_date");
 
             HasRequired(o => o.Customer)
                 .WithMany(customer => customer.Orders)

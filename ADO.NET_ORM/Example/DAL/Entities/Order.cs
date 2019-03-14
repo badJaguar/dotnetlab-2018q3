@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Security.AccessControl;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DAL.Entities
 {
@@ -8,6 +8,7 @@ namespace DAL.Entities
         public int Id { get; set; }
         public int CustomerId { get; set; }
         public decimal Total { get; set; }
+        public virtual DateTimeOffset OrderDate { get; set; }
         public virtual Customer Customer { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }
 
