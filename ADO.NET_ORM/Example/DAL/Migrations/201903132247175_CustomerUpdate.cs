@@ -12,13 +12,16 @@ namespace DAL.Migrations
             RenameColumn(table: "dbo.tbl_orders", name: "Customer_Id", newName: "cln_cust_id");
             AlterColumn("dbo.tbl_orders", "cln_cust_id", c => c.Int(nullable: false));
             CreateIndex("dbo.tbl_orders", "cln_cust_id");
-            
-            Sql("update dbo.tbl_orders set cln_cust_id = 56 where cln_id = 1");
-            Sql("update dbo.tbl_orders set cln_cust_id = 2 where cln_id = 2");
+
             Sql("insert into dbo.tbl_customers (cln_id, cln_comp_name, cln_address, cln_city, cln_state)" +
-                " values (56, 'Foo, Inc', '23 Main St.', 'Thorpleburg', 'TX')");
+                " values (1, 'Foo, Inc', '23 Main St.', 'Thorpleburg', 'TX')");
             Sql("insert into dbo.tbl_customers (cln_id, cln_comp_name, cln_address, cln_city, cln_state)" +
                 " values (2, 'Freens R US', '1600 Pennsylvania Avenue', 'Washington', 'DC')");
+
+            Sql("update tbl_orders set cln_cust_id = 56 where cln_id = 1");
+            Sql("update tbl_orders set cln_cust_id = 2 where cln_id = 2");
+
+           
 
             AddForeignKey("dbo.tbl_orders", "cln_cust_id", "dbo.tbl_customers", "cln_id", cascadeDelete: true);
         }
