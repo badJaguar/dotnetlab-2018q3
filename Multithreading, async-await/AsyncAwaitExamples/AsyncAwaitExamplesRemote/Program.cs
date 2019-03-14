@@ -17,7 +17,7 @@ namespace AsyncAwaitExamples
             var stopWatch = new Stopwatch();
             stopWatch.Start();
 
-            var input = Enumerable.Range(1, 1000000);
+            var input = Enumerable.Range(1, 80);
             closuresTask.Start(input); // start worker
 
             stopWatch.Stop();
@@ -25,6 +25,7 @@ namespace AsyncAwaitExamples
             var elapsedTime = $"{elapsed.Hours:00}:{elapsed.Minutes:00}:{elapsed.Seconds:00}.{elapsed.Milliseconds / 10:00}";
 
             Console.WriteLine($"Required time: {elapsedTime}");
+            Console.ReadKey();
         }
     }
 
@@ -35,15 +36,34 @@ namespace AsyncAwaitExamples
             var lockObject = new object();
             var aggregateResult = new BatchResult();
 
-            Parallel.ForEach(inputValues, item => {
-                try {
-                    HardRemoteWorker.HardWork(item);
-                } catch (Exception ex) {
-                    lock (lockObject) {
-                        aggregateResult.AddError(ex.Message);
-                    }
-                }
-            });
+            var tasks = new List<Task>();
+            //Parallel.ForEach(inputValues, item => {
+            //    try {
+            //        HardRemoteWorker.HardWork(item);
+            //    } catch (Exception ex) {
+            //        lock (lockObject) {
+            //            aggregateResult.AddError(ex.Message);
+            //        }
+            //    }
+            //});
+            foreach (var value in inputValues)
+            {
+                var task = Task.Factory.StartNew(async () =>
+                {
+                    await HardRemoteWorker.HardWork(value);
+                }).Unwrap();
+                tasks.Add(task);
+            }
+
+            try
+            {
+                Task.WaitAll(tasks.ToArray());
+            }
+            catch (AggregateException e)
+            {
+                Console.WriteLine(e.ToString());
+                //throw;
+            }
 
             if (aggregateResult.Success == false) {
                 Console.WriteLine(string.Join("\n", aggregateResult.Errors));
@@ -57,9 +77,9 @@ namespace AsyncAwaitExamples
 
         public static Random Random = new Random();
 
-        public static void HardWork(int item)
+        public static async Task HardWork(int item)
         {
-            var content = DownloadService.Download(Address);
+            var content = await DownloadService.DownloadAsync(Address);
 
             var value = Random.Next(1, 10);
             if (value > 6) {

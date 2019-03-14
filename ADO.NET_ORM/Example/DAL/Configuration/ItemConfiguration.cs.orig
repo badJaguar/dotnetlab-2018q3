@@ -1,4 +1,5 @@
-using System.Data.Entity.ModelConfiguration;
+<<<<<<< HEAD
+﻿using System.Data.Entity.ModelConfiguration;
 using DAL.Entities;
 
 namespace DAL.Configuration
@@ -8,9 +9,26 @@ namespace DAL.Configuration
         public ItemConfiguration()
         {
             ToTable("tbl_items").HasKey(item => item.Id);
+=======
+﻿using DAL.Entities;
+using System.Data.Entity.ModelConfiguration;
+
+namespace DAL.Configuration
+{
+    /// <inheritdoc />
+    internal class ItemConfiguration : EntityTypeConfiguration<Item>
+    {
+        public ItemConfiguration()
+        {
+            ToTable("tbl_items").HasKey(key => key.Id);
+>>>>>>> master
             Property(item => item.Id).HasColumnName("cln_id");
             Property(item => item.Description).HasColumnName("cln_description");
             Property(item => item.Price).HasColumnName("cln_price");
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

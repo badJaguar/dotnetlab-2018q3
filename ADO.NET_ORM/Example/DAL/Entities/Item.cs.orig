@@ -21,10 +21,15 @@ namespace DAL.Entities
         /// Gets or sets an item price.
         /// </summary>
         public decimal Price { get; set; }
+<<<<<<< HEAD
+        public ICollection<OrderItem> OrderItems { get; set; }
+
+=======
 
         /// <summary>
         /// Gets or sets a collection of orders.
         /// </summary>
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+>>>>>>> master
     }
 }

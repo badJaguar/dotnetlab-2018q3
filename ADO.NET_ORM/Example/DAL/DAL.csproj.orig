@@ -58,6 +58,7 @@
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderItem.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\201903141540411_InitialCreate.cs" />
     <Compile Include="Migrations\201903141540411_InitialCreate.Designer.cs">
       <DependentUpon>201903141540411_InitialCreate.cs</DependentUpon>
@@ -77,6 +78,31 @@
     <Compile Include="Migrations\201903141801545_AddOrderDateToOrder.cs" />
     <Compile Include="Migrations\201903141801545_AddOrderDateToOrder.Designer.cs">
       <DependentUpon>201903141801545_AddOrderDateToOrder.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201903121208274_InitialCreate.cs" />
+    <Compile Include="Migrations\201903121208274_InitialCreate.Designer.cs">
+      <DependentUpon>201903121208274_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903121642423_AddOrderConfWithAllProperties.cs" />
+    <Compile Include="Migrations\201903121642423_AddOrderConfWithAllProperties.Designer.cs">
+      <DependentUpon>201903121642423_AddOrderConfWithAllProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903122227061_AddOrderItemConfWithAllProperties.cs" />
+    <Compile Include="Migrations\201903122227061_AddOrderItemConfWithAllProperties.Designer.cs">
+      <DependentUpon>201903122227061_AddOrderItemConfWithAllProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903131417178_OrderItemUpdated.cs" />
+    <Compile Include="Migrations\201903131417178_OrderItemUpdated.Designer.cs">
+      <DependentUpon>201903131417178_OrderItemUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903131839559_AddCustomerWithAllProperties.cs" />
+    <Compile Include="Migrations\201903131839559_AddCustomerWithAllProperties.Designer.cs">
+      <DependentUpon>201903131839559_AddCustomerWithAllProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903132247175_CustomerUpdate.cs" />
+    <Compile Include="Migrations\201903132247175_CustomerUpdate.Designer.cs">
+      <DependentUpon>201903132247175_CustomerUpdate.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +112,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201903141540411_InitialCreate.resx">
       <DependentUpon>201903141540411_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +127,25 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903141801545_AddOrderDateToOrder.resx">
       <DependentUpon>201903141801545_AddOrderDateToOrder.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201903121208274_InitialCreate.resx">
+      <DependentUpon>201903121208274_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121642423_AddOrderConfWithAllProperties.resx">
+      <DependentUpon>201903121642423_AddOrderConfWithAllProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903122227061_AddOrderItemConfWithAllProperties.resx">
+      <DependentUpon>201903122227061_AddOrderItemConfWithAllProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903131417178_OrderItemUpdated.resx">
+      <DependentUpon>201903131417178_OrderItemUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903131839559_AddCustomerWithAllProperties.resx">
+      <DependentUpon>201903131839559_AddCustomerWithAllProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903132247175_CustomerUpdate.resx">
+      <DependentUpon>201903132247175_CustomerUpdate.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
