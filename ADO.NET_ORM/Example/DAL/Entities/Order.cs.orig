@@ -1,8 +1,19 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace DAL.Entities
 {
+<<<<<<< HEAD
+    public class Order
+    {
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
+        public decimal Total { get; set; }
+        public virtual DateTimeOffset OrderDate { get; set; }
+        public virtual Customer Customer { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; }
+
+=======
     /// <summary>
     /// Represents an order.
     /// </summary>
@@ -21,7 +32,7 @@ namespace DAL.Entities
         /// <summary>
         /// Gets or sets an order total price.
         /// </summary>
-        public decimal Total { get; set; }
+        public decimal TotalPrice { get; set; }
 
         /// <summary>
         /// Gets or sets a date of order.
@@ -37,5 +48,6 @@ namespace DAL.Entities
         /// Gets or sets an item collection.
         /// </summary>
         public virtual ICollection<OrderItem> OrderItems { get; set; }
+>>>>>>> master
     }
 }

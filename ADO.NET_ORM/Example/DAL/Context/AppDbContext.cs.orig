@@ -8,7 +8,12 @@ namespace DAL.Context
     {
         public AppDbContext() : base("InternationalWidgets")
         {
+<<<<<<< HEAD
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
+=======
+            Database.SetInitializer(new 
+                MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
+>>>>>>> master
         }
 
         public DbSet<Item> Items { get; set; }
@@ -19,6 +24,10 @@ namespace DAL.Context
             modelBuilder.Configurations.Add(new OrderConfiguration());
             modelBuilder.Configurations.Add(new OrderItemConfiguration());
             modelBuilder.Configurations.Add(new CustomerConfiguration());
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -1,7 +1,16 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace DAL.Entities
 {
+<<<<<<< HEAD
+    public class Customer
+    {
+        public int Id { get; set; }
+        public string CompanyName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+=======
     /// <summary>
     /// Represents a customer entity.
     /// </summary>
@@ -35,6 +44,7 @@ namespace DAL.Entities
         /// <summary>
         /// Gets or sets customers collection orders.
         /// </summary>
+>>>>>>> master
         public ICollection<Order> Orders { get; set; }
     }
 }

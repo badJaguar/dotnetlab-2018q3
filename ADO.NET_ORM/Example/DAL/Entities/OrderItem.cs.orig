@@ -1,5 +1,14 @@
-namespace DAL.Entities
+﻿namespace DAL.Entities
 {
+<<<<<<< HEAD
+    public class OrderItem
+    {
+        public int ItemId { get; set; }
+        public int OrderId { get; set; }
+        public int Quantity { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Item Item { get; set; }
+=======
     /// <summary>
     /// Represents an intermediate entity binding 'Item' and 'Order'.
     /// </summary>
@@ -29,5 +38,6 @@ namespace DAL.Entities
         /// Gets or sets an order.
         /// </summary>
         public virtual Order Order { get; set; }
+>>>>>>> master
     }
 }
