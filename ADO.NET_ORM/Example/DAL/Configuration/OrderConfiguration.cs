@@ -7,7 +7,7 @@ namespace DAL.Configuration
     {
         public OrderConfiguration()
         {
-            ToTable("tbl_order").HasKey(order => order.Id);
+            ToTable("tbl_orders").HasKey(order => order.Id);
             Property(order => order.Id).HasColumnName("cln_id");
             Property(order => order.Total).HasColumnName("cln_total");
 
@@ -17,7 +17,7 @@ namespace DAL.Configuration
                 {
                     conf.MapLeftKey("cln_order_id");
                     conf.MapRightKey("cln_item_id");
-                    ToTable("tbl_orders_items");
+                    conf.ToTable("tbl_orders_items");
                 });
         }
     }

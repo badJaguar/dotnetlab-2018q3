@@ -13,7 +13,7 @@ namespace DAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201903141631318_OrderMigration"; }
+            get { return "201903141640585_OrderMigration"; }
         }
         
         string IMigrationMetadata.Source

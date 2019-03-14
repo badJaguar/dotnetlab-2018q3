@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201903141540411_InitialCreate.Designer.cs">
       <DependentUpon>201903141540411_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903141640585_OrderMigration.cs" />
+    <Compile Include="Migrations\201903141640585_OrderMigration.Designer.cs">
+      <DependentUpon>201903141640585_OrderMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903141540411_InitialCreate.resx">
       <DependentUpon>201903141540411_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903141640585_OrderMigration.resx">
+      <DependentUpon>201903141640585_OrderMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
