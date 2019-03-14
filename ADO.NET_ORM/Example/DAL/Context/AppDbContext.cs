@@ -17,6 +17,7 @@ namespace DAL.Context
         {
             modelBuilder.Configurations.Add(new ItemConfiguration());
             modelBuilder.Configurations.Add(new OrderConfiguration());
+            modelBuilder.Configurations.Add(new OrderItemConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -6,7 +6,7 @@ namespace DAL.Entities
     {
         public int Id { get; set; }
         public decimal Total { get; set; }
-        public ICollection<Item> Items { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; }
 
     }
 }
