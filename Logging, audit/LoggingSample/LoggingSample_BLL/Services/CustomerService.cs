@@ -13,6 +13,11 @@ namespace LoggingSample_BLL.Services
 
         public Task<CustomerModel> GetCustomer(int customerId)
         {
+            if (customerId == 56)
+            {
+                throw new CustomerException("Wrong Id is requested", CustomerException.ErrorType.WrongId);
+            }
+
             return _context.Customers.SingleOrDefaultAsync(item => item.Id == customerId).ContinueWith(task => {
                 var customer = task.Result;
 
@@ -23,6 +28,21 @@ namespace LoggingSample_BLL.Services
         public void Dispose()
         {
             _context.Dispose();
+        }
+    }
+
+    public class CustomerException : Exception
+    {
+        public enum ErrorType
+        {
+            WrongId
+        }
+
+        public ErrorType Type { get; set; }
+
+        public CustomerException(string message, ErrorType errorType) : base(message)
+        {
+            Type = errorType;
         }
     }
 }
